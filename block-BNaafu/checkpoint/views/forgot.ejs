@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="container flex justify-between-flex align-center">
+            <a href="" class="logo">Expense Tracker</a>
+            <nav>
+                <ul class="flex align-center">
+                    <li><a href="/">Home</a></li>
+                    <% if (user) { %>
+                        <li><a href="/users/logout">logout</a></li>
+                    <% }else{ %>
+                        <li><a href="/verifyEmail">signup</a></li>
+                        <li><a href="/users/login">login</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="forgot-sec">
+            <div class="container flex justify-center-flex align-center">
+                <div class="flex-30">
+                    <a href="/"></a>
+                    <a href="/"></a>
+                    <form action="/verifyEmail/forgot" method="POST">
+                        <label for="email">verify your email</label>
+                        <input type="email" required id="email" name="email" class="form-control" placeholder="enter your email">
+                        <button type="submit" class="form-control">veryfy</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
